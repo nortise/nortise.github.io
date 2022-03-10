@@ -36,44 +36,6 @@
 
 
 
-   <style>
-    body{
-       background-image: url(https://w.wallhaven.cc/full/3z/wallhaven-3zgz2y.png);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-    .header-inner {
-  // 也可以同时定义背景色
-  // background: #ddd 
-  // 透明度
-  // opacity: 0.8;
-}
-// sidebar侧边工具栏样式属性
-.sidebar{
-    // 动画过渡时间
-	transition-duration: 0.4s;
-    // 透明度
-	opacity: 0.8
-}
-// 标题样式
-.posts-expand .post-title-link {
-	// 设置字体颜色
-	color: #222;
-}
-
-// 文章版块样式
-.post-block {
-    //background: var(--content-bg-color);
-	background: #fff
-    border-radius: initial;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
-    padding: 40px;
-}
-
-</style>
-
-
 
 <body>
     <header class="navbar-fixed">
@@ -405,21 +367,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">1</a></span>
+    <span class="count"><a href="/">2</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">1</a></span>
+    <span class="count"><a href="/categories">2</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">1</a></span>
+    <span class="count"><a href="/tags">2</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -435,21 +397,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">1</a></span>
+    <span class="count"><a href="/">2</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">1</a></span>
+    <span class="count"><a href="/categories">2</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">1</a></span>
+    <span class="count"><a href="/tags">2</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -585,7 +547,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,1],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,2],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -627,7 +589,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"JavaScript","value":1}],
+                data: [{"name":"计算机底层","value":1},{"name":"JavaScript","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -651,7 +613,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["JavaScript"]
+                data: ["计算机底层","JavaScript"]
             }
         ],
         yAxis: [
@@ -664,7 +626,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1],
+                data: [1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -835,7 +797,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">3.1k</span>&nbsp;字
+                class="white-color">4.1k</span>&nbsp;字
             
             
             
