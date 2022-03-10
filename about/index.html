@@ -43,6 +43,34 @@
        background-size:cover;
        background-attachment:fixed;
     }
+    .header-inner {
+  // 也可以同时定义背景色
+  // background: #ddd 
+  // 透明度
+  // opacity: 0.8;
+}
+// sidebar侧边工具栏样式属性
+.sidebar{
+    // 动画过渡时间
+	transition-duration: 0.4s;
+    // 透明度
+	opacity: 0.8
+}
+// 标题样式
+.posts-expand .post-title-link {
+	// 设置字体颜色
+	color: #222;
+}
+
+// 文章版块样式
+.post-block {
+    //background: var(--content-bg-color);
+	background: #fff
+    border-radius: initial;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+    padding: 40px;
+}
+
 </style>
 
 
@@ -333,7 +361,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+                夏一北の博客
                 
             </div>
 
@@ -669,99 +697,6 @@
                 
 
                 
-                
-<div class="my-skills">
-    <div class="title center-align" data-aos="zoom-in-up">
-        <i class="fas fa-wrench"></i>&nbsp;&nbsp;我的技能
-    </div>
-    <div class="row">
-        
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 85%">
-                    <span>Java</span>
-                </div>
-                <div class="skill-bar-percent">85%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 80%">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-bar-percent">80%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 80%">
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-bar-percent">80%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                    <span>CSS</span>
-                </div>
-                <div class="skill-bar-percent">70%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 90%">
-                    <span>SQL</span>
-                </div>
-                <div class="skill-bar-percent">90%</div>
-            </div>
-        </div>
-        
-        
-        <div class="col s12 m6 l6" data-aos="fade-up">
-            <div class="skillbar">
-                <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-                    <span>程序设计</span>
-                </div>
-                <div class="skill-bar-percent">75%</div>
-            </div>
-        </div>
-        
-        
-    </div>
-
-    
-
-    
-    <div class="other-skills chip-container" data-aos="zoom-in-up">
-        <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
-        <div class="tag-chips center-align">
-            
-            
-            
-        </div>
-    </div>
-    
-
-</div>
-
-                
 
                 
                 
@@ -787,6 +722,24 @@
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/2.jpg">
                 <img src="/medias/featureimages/2.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/3.jpg">
+                <img src="/medias/featureimages/3.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/4.jpg">
+                <img src="/medias/featureimages/4.jpg" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="photo col s12 m6 l4" data-aos="fade-up">
+            <div class="img-item" data-src="/medias/featureimages/5.jpg">
+                <img src="/medias/featureimages/5.jpg" class="responsive-img">
             </div>
         </div>
         
@@ -1101,6 +1054,7 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+
 
     <!-- Baidu Analytics -->
 
