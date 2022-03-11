@@ -131,6 +131,15 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/404" class="waves-effect waves-light">
+      
+      <span>公益404</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -230,6 +239,17 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/404" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			公益404
 		</a>
           
         </li>
@@ -888,8 +908,8 @@
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            collapseDepth: Number('5'),
+            headingSelector: 'h1, h2, h3, h4, h5'
         });
 
         // modify the toc link href to support Chinese.
@@ -901,7 +921,7 @@
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1, h2, h3, h4, h5').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
