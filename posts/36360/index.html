@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机基础学习学习笔记, 夏一北の博客">
+    <meta name="keywords" content="SqlServer基础, 夏一北の博客">
     <meta name="description" content="坚持你所热爱的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机基础学习学习笔记 | 夏一北の博客</title>
+    <title>SqlServer基础 | 夏一北の博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/images/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机基础学习学习笔记</h1>
+                    <h1 class="description center-align post-title">SqlServer基础</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%95%E5%B1%82/">
-                                <span class="chip bg-color">计算机底层</span>
+                            <a href="/tags/SqlServer/">
+                                <span class="chip bg-color">SqlServer</span>
                             </a>
                         
                     </div>
@@ -450,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%95%E5%B1%82/" class="post-category">
-                                计算机底层
+                            <a href="/categories/SqlServer/" class="post-category">
+                                SqlServer
                             </a>
                         
                     </div>
@@ -463,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-03-10
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-03-11
+                    2022-03-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    960
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    9 分
                 </div>
                 
 
@@ -512,180 +512,233 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p><strong>语言</strong></p>
-<p><strong>进制</strong></p>
-<p><strong>进制如何运算</strong></p>
-<p><strong>二进制</strong></p>
-<p><strong>数据宽度</strong></p>
-<p><strong>有符号数和无符号数</strong></p>
-<p><strong>原码反码补码</strong></p>
-<p><strong>位运算</strong></p>
-<p><strong>位运算计算</strong></p>
-<p><strong>汇编</strong></p>
-<p><strong>寄存器</strong></p>
-<p> <strong>内存</strong></p>
-<p><strong>汇编指令</strong></p>
-<p><strong>内存复制</strong></p>
-<p><strong>堆栈的指令</strong></p>
-<p><strong>汇编如何写函数</strong></p>
-<p><strong>堆栈传参</strong></p>
-<p><strong>堆栈平衡</strong></p>
-<p><strong>外挂</strong></p>
-<h1 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h1><p><strong>机器语言 -&gt; 汇编语言 -&gt; 高级语言</strong></p>
-<h3 id="机器语言"><a href="#机器语言" class="headerlink" title="机器语言"></a><strong>机器语言</strong></h3><p>底层逻辑</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 最早的计算机
-状态： 0 和 1 （高电频，低电频）
-# 最早的程序员
-纸带穿孔
-加	0100 0000
-减	0100 0000
-乘	0100 0000 0100 0000
-除	0100 0100 0100 0000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="汇编语言"><a href="#汇编语言" class="headerlink" title="汇编语言"></a><strong>汇编语言</strong></h3><p>机器语言太复杂，为了简化记忆，汇编语言！</p>
-<p>+++</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">加	INC		0100 0000
-减	DEC		0100 0000
-乘	MUL		0100 0000 0100 0000
-除	DIV		0100 0000 0100 0000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>汇编语言一般用于底层的编写，单片机。</p>
-<p>编译器：OD</p>
-<h3 id="高级语言"><a href="#高级语言" class="headerlink" title="高级语言"></a><strong>高级语言</strong></h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">加 + NIC
-减 - DEC
-乘 * MUL
-除 / DIV<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h1><p>+++</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">二进制 0 1
-八进制 0 1 2 3 4 5 6 7
-十进制 0 1 2 3 4 5 6 7 8 9
-十六进制 0 1 2 3 4 5 6 7 8 9 a b c d e f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>进制就是一组符号，可以自己随便定义。适用于<strong>进制的加密解密</strong></p>
-<h1 id="进制的运算"><a href="#进制的运算" class="headerlink" title="进制的运算"></a>进制的运算</h1><p>几进制，逢几进几</p>
-<p><strong>减法的本质</strong>：加一个负数</p>
-<p><strong>除法的本质</strong>：乘一个数的倒数</p>
-<h1 id="二进制"><a href="#二进制" class="headerlink" title="二进制"></a>二进制</h1><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 二进制
-0 1111 
-0 1 10 11 100 101 110 111 1000 1001 1010 1011 1100 1101 1110 1111
-0 1  2  3  4   5   6   7    8   9    a    b    c     d   e     f<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p><strong>为什么学习二进制？</strong></p>
-<p>寄存器，内存，位</p>
-<h1 id="数据宽度理解"><a href="#数据宽度理解" class="headerlink" title="数据宽度理解"></a>数据宽度理解</h1><p>计算机：内存，给数据增加宽度</p>
-<p>位       0 1</p>
-<p>字节     0~0xFF</p>
-<p>字         0~0xFF </p>
-<p>双字     0~0xFFFFFFF</p>
-<p>在计算机中，每一个数据都需要给它定义数据类型，和数据长度</p>
-<h1 id="有符号数和无符号数"><a href="#有符号数和无符号数" class="headerlink" title="有符号数和无符号数"></a>有符号数和无符号数</h1><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 有符号数
-最高位符号： 0（正数） 1（负数）
-# 无符号数
-二进制：1001 1010
-十六进制：0x9A<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h1 id="原码-反码-补码"><a href="#原码-反码-补码" class="headerlink" title="原码 反码 补码"></a>原码 反码 补码</h1><p><strong>有符号数的编码规则</strong></p>
-<p>原码：最高位是符号位，对其他的位取绝对值</p>
-<p>反码：</p>
+                <h1 id="第一章-数据库基础"><a href="#第一章-数据库基础" class="headerlink" title="第一章    数据库基础"></a>第一章    数据库基础</h1><h2 id="1-数据库-DB"><a href="#1-数据库-DB" class="headerlink" title="1.数据库(DB)"></a>1.数据库(DB)</h2><p><strong>数据库的定义</strong></p>
 <ul>
-<li>正数：反码和原码相同</li>
-<li>负数：最高位是1，其余位对原码取反</li>
+<li>数据库（DataBase,DB）是长期储存在计算机内，有组织的，可共享的大量数据的集合</li>
 </ul>
-<p>补码：</p>
+<p><strong>数据库的基本特征</strong></p>
+<ol>
+<li>数据按一定的数据模型组织，描述和储存</li>
+<li>可为各种用户共享数据</li>
+<li>冗余度较小</li>
+<li>数据独立性较高</li>
+<li>易扩展</li>
+</ol>
+<p><strong>数据库总览</strong></p>
 <ul>
-<li>正数：补码和原码相同</li>
-<li>负数：最高位是1，反码+1</li>
+<li>关系型数据库（SQL）<ul>
+<li>MySQL , Oracle , SQL Server , SQLite , DB2 , …</li>
+<li>关系型数据库通过<strong>外键</strong>关联来建立表与表之间的关系</li>
 </ul>
-<h1 id="位运算的理解"><a href="#位运算的理解" class="headerlink" title="位运算的理解"></a>位运算的理解</h1><p><strong>与运算（and &amp;）</strong></p>
-<p>两个为1，都为1</p>
-<p> <strong>或运算（or |）</strong></p>
-<p>只要有一个为1，结果就为1</p>
-<p><strong>异或运算（xor ^）</strong></p>
-<p>不一样就是1</p>
-<p><strong>非运算（not ~ 单目运算符）</strong></p>
-<blockquote>
-<p>1100   0011</p>
+</li>
+<li>非关系型数据库（NOSQL）<ul>
+<li>Redis , MongoDB , …</li>
+<li>非关系型数据库通常指数据以<strong>对象</strong>的形式存储在数据库中，而对象之间的关系通过每个对象自 身的属性来决定</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-数据库管理系统（DBMS"><a href="#2-数据库管理系统（DBMS" class="headerlink" title="2.数据库管理系统（DBMS)"></a>2.数据库管理系统（DBMS)</h2><blockquote>
+<p><strong>数据库管理系统是一个用于支持用户创建和维护数据库的应用程序集合</strong>,<strong>是一个计算机基础软件，一个大型复杂的软件系统</strong></p>
 </blockquote>
-<p><strong>位运算（移动位）</strong></p>
-<p><strong>左移（shl &lt;&lt;）</strong></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">0000 0001  @ 所有二进制全部向左移动若干位，低位补0，高位舍弃
-0000 0010<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><strong>右移（shr &gt;&gt;）</strong></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">0000 0001  @ 所有二进制全部向右移动若干位，低位舍弃，高位补0，1（根据符号而定）
-0000 0000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<h1 id="位运算的加减乘除"><a href="#位运算的加减乘除" class="headerlink" title="位运算的加减乘除"></a>位运算的加减乘除</h1><p>计算机只认识0和1</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">4+5？
-
-0000 0100
-0000 0101
-------------(加法，计算机不会直接加)
-0000 1001
-
-# 计算机的实现原理
-
-# 第一步：异或，如果不考虑进位，结果就是答案
-0000 0100
-0000 0101
-------------
-0000 0001
-
-# 第二步：与运算（判断进位，如果与运算结果为0，则不考虑进位）
-0000 0100
-0000 0101
-------------
-0000 0100
-
-# 第三步：将与运算的结果往左移一位 
-0000 1000 # 进位的结果
-
-# 第四步：异或，两次的结果
-0000 0001
-0000 1000
-------------
-0000 1001
-
-# 第五步：与运算（判断进位，如果与运算结果为0，则不考虑进位）
-0000 0001
-0000 1000
-------------
-0000 0000
-
-# 计算结果为0，所以最终结果为第四步异或运算的结果 0000 1001<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">4-5？
-4+（-5） 负数用补码来存
-
-0000 0100
-1111 1011      
-------------
-1111 1111   	十六进制：ff
-
-0000 0100
-1111 1011      
------------- 异或，如果不考虑进位，这个就是结果
-1111 1111
-
-0000 0100
-1111 1011      
------------- 与运算，运算结果为0，不考虑进位
-0000 0000
-最终结果 0000 0000	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h1 id="汇编语言-1"><a href="#汇编语言-1" class="headerlink" title="汇编语言"></a>汇编语言</h1><h2 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h2><hr>
-
+<p><strong>DBMS的用途</strong></p>
+<p>科学地组织和存储数据、高效地获取和维护数据</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326085640726.png" alt="image-20220326085640726"></p>
+<h3 id="DBMS主要功能"><a href="#DBMS主要功能" class="headerlink" title="DBMS主要功能"></a><strong>DBMS主要功能</strong></h3><ol>
+<li><p><strong>数据定义功能</strong></p>
+<ol>
+<li>提供数据定义语言(Data Defination Language，DDL)</li>
+<li>定义数据库中的数据对象</li>
+</ol>
+</li>
+<li><p><strong>数据组织、存储和管理功能</strong></p>
+<ol>
+<li>分类组织、存储和管理各种数据，如用户数据、数据字典、索引等</li>
+<li>确定组织数据的文件结构和存取方式</li>
+<li>实现数据之间的联系</li>
+<li>提供多种存取方法提高存取效率</li>
+</ol>
+</li>
+<li><p><strong>数据操纵功能</strong></p>
+<ol>
+<li>提供数据操纵语言(Data Manipulation Language，DML)</li>
+<li>实现对数据库的基本操作 (查询、插入、删除和修改)</li>
+</ol>
+</li>
+<li><p><strong>数据库的事务管理和运行管理</strong></p>
+<ol>
+<li>数据库在建立、运行和维护时由DBMS统一管理和控制</li>
+<li>保证数据的安全性、完整性、多用户对数据的并发使用以及发生故障后的系统恢复</li>
+</ol>
+</li>
+<li><p><strong>数据库的建立和维护功能</strong></p>
+<ol>
+<li>数据库初始数据装载、转换</li>
+<li>数据库转储，介质故障恢复</li>
+<li>数据库的重组织</li>
+<li>性能监视分析等</li>
+</ol>
+</li>
+<li><p><strong>其他功能</strong></p>
+<ol>
+<li>DBMS与网络中其它软件系统的通信</li>
+<li>两个DBMS系统的数据转换</li>
+<li>异构数据库之间的互访和互操作</li>
+</ol>
+<h3 id="DBMS的工作模式示意图"><a href="#DBMS的工作模式示意图" class="headerlink" title="DBMS的工作模式示意图"></a>DBMS的工作模式示意图</h3><p>  1）接收应用程序的数据请求和处理请求。</p>
+<p>  2）将用户的查询数据请求（高级指令）转换成复杂的低层指令。</p>
+<p>  3）低层指令实现对数据库的具体操作。</p>
+<p>  4）接收数据库操作得到的查询结果。</p>
+<p>  5）对查询结果进行处理，包括相应的格式转换。</p>
+<p>  6）将处理结果返回给用户。</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326103911455.png" alt="image-20220326103911455"></p>
+<h3 id="数据库管理系统的模块组成"><a href="#数据库管理系统的模块组成" class="headerlink" title="数据库管理系统的模块组成"></a>数据库管理系统的模块组成</h3></li>
+</ol>
+<ul>
+<li>语言编译处理程序</li>
+<li>系统运行控制程序</li>
+<li>系统建立与维护程序</li>
+<li>数据字典</li>
+</ul>
+<h2 id="3-数据库系统（DBS）"><a href="#3-数据库系统（DBS）" class="headerlink" title="3.数据库系统（DBS）"></a>3.数据库系统（DBS）</h2><p>定义：在计算机系统中引入数据库的系统称为数据库系统</p>
+<p>构成：数据库、数据库管理系统、应用程序、数据库管理员、用户</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326091056871.png" alt="image-20220326091056871"></p>
+<p><strong>数据处理</strong></p>
+<p>对各种类型的数据进行收集、分类、储存、检索、加工和计算、传播等一系列活动的综合</p>
+<p><strong>数据管理</strong></p>
+<ul>
+<li>对数据进行分类、组织、编码、存储、检索和维护</li>
+<li>数据处理的核心问题</li>
+</ul>
+<p><strong>数据库系统的结构类型</strong></p>
+<p>数据库系统的类型可以从不同的角度进行划分。根据<strong>用户数的多少</strong>来分类，可分为单用户和多用户；根据<strong>用途和使用范围</strong>分类为数据仓库或决策支持等类型；按数据库系统的部署位置不同可分为<strong>集中式</strong>、<strong>客户机／服务器式</strong>、<strong>分布式</strong>和<strong>并行式</strong>4种。</p>
+<ol>
+<li><strong>集中式数据库系统</strong></li>
+</ol>
+<p>数据库中的<strong>数据和数据处理集中在一台计算机上完成</strong>，其它用户可使用终端设备访问数据库，但是终端不参数据库中数据的计算与管理。此外，终端本身并不能完成任何操作,所有数据操作必须由主机完成</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326095918346.png" alt="image-20220326095918346"></p>
+<ol start="2">
+<li><strong>客户机/服务器（Client/Server，C/S）数据库系统</strong></li>
+</ol>
+<p>客户端完成本地个性化的处理，并向服务器发送请求，同时显示服务器返回的数据结果；服务器端负责处理公共的部分任务</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326100028190.png" alt="image-20220326100028190"></p>
+<p><strong>C/S三层架构</strong></p>
+<p>实际应用中，出于系统安全性、稳定性和健壮性考虑，通常将数<strong>据库、应用服务器和客户端</strong>三层分开部署，称为C/S三层架构。包括：表示层、应用层和数据层。</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326100246501.png" alt="image-20220326100246501"></p>
+<ol start="3">
+<li><strong>分布式数据库系统</strong></li>
+</ol>
+<p>特点：逻辑整体性，物理分布性</p>
+<blockquote>
+<p>分布式数据库一般应用在大型跨国或跨地区的企业或单位</p>
+</blockquote>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326100414520.png" alt="image-20220326100414520"></p>
+<ol start="4">
+<li><strong>并行式数据库系统</strong></li>
+</ol>
+<p><strong>高性能</strong>：如通过将数据库在多个磁盘上分布存储,利用多个处理机对磁盘数据进行并行处理解决磁盘I/O瓶颈,提高效率</p>
+<p><strong>高可用性</strong>：通过数据复制增强数据库的可用性,当一个磁盘损坏时,该数据在其他磁盘上的副本仍可供使用</p>
+<p><strong>可扩充性</strong>：当数据库遇到性能和容量瓶颈时,可通过增加处理器和存储设备平滑扩展性能</p>
+<h2 id="4-数据库系统的发展及趋势"><a href="#4-数据库系统的发展及趋势" class="headerlink" title="4.数据库系统的发展及趋势"></a>4.数据库系统的发展及趋势</h2><h3 id="人工数据管理阶段"><a href="#人工数据管理阶段" class="headerlink" title="人工数据管理阶段"></a>人工数据管理阶段</h3><p>1946年后计算机以电子管为主要元器件,主要依靠硬件系统,工作效率低,用于计算且输入输出很少数据。</p>
+<p>主要特点：</p>
+<ol>
+<li>数据不保存</li>
+<li>数据面向应用</li>
+<li>数据无独立性</li>
+<li>无专门数据管理软件</li>
+</ol>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326092354168.png" alt="image-20220326092354168"></p>
+<h3 id="文件系统管理数据阶段"><a href="#文件系统管理数据阶段" class="headerlink" title="文件系统管理数据阶段"></a>文件系统管理数据阶段</h3><p>从20世纪50年代中期到60年代中期，计算机以晶体管取代了运算器和控制器中的电子管。出现了操作系统、汇编语言和一些高级语言。计算机不仅限于科学计算，还大量用于管理等，在操作系统中有专门的数据管理软件，称为文件系统。</p>
+<p><strong>文件系统管理数据的特点</strong></p>
+<ol>
+<li>数据长久保存</li>
+<li>数据共享能力差</li>
+<li>数据不能独立</li>
+<li>数据管理功能简单</li>
+</ol>
+<p><strong>文件系统的不足</strong></p>
+<ol>
+<li>数据不共享，冗余大</li>
+<li>数据不一致，不独立</li>
+<li>数据文件缺乏关联<img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326092629602.png" alt="image-20220326092629602"></li>
+</ol>
+<h3 id="数据库系统阶段"><a href="#数据库系统阶段" class="headerlink" title="数据库系统阶段"></a>数据库系统阶段</h3><p>从20世纪60年代末到80年代，CPU向超大规模集成电路发展,操作系统得到了发展，而且各种<strong>DBMS软件</strong>不断涌现，使得数据库管理技术不断发展和完善，成为计算机领域中最具影响力和发展潜力、应用范围最广、成果最显著技术之一，形成了“数据库时代”。</p>
+<p><strong>主要特点：</strong></p>
+<ol>
+<li>数据整体结构化</li>
+<li>数据高共享</li>
+<li>数据独立性高</li>
+<li>数据统一由DBMS管理和控制</li>
+</ol>
+<h3 id="高级数据库发展阶段"><a href="#高级数据库发展阶段" class="headerlink" title="高级数据库发展阶段"></a>高级数据库发展阶段</h3><p>从20世纪80年代以后，传统数据库技术日趋成熟，并在各个领域的应用也逐步深入，在网络技术和各行业的新需求的不断推动下，数据库技术的发展呈现出前所未有的新气象，<strong>分布数据库</strong>、<strong>数据仓库</strong>、<strong>数据集市</strong>和<strong>商业智能</strong>等新技术纷纷涌现。</p>
+<h4 id="分布式数据技术"><a href="#分布式数据技术" class="headerlink" title="分布式数据技术"></a>分布式数据技术</h4><p><strong>主要特点：</strong></p>
+<ol>
+<li>物理分布性</li>
+<li>逻辑整体性</li>
+<li>站点自治性</li>
+<li>站点协作性</li>
+<li>数据分布透明性</li>
+<li>存在适当的数据冗余</li>
+<li>事务管理的分布性</li>
+</ol>
+<p>分布式数据库系统兼顾<strong>集中管理</strong>和<strong>分布处理</strong>两项任务</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326093144146.png" alt="image-20220326093144146"></p>
+<h4 id="面向对象数据库技术"><a href="#面向对象数据库技术" class="headerlink" title="面向对象数据库技术"></a>面向对象数据库技术</h4><p><strong>主要特点</strong></p>
+<ol>
+<li>对象数据模型能完整地描述现实世界中的数据结构，表达数据间的嵌套，递归等关系</li>
+<li>具有面向对象技术的封装性（数据与操作定义一起）和继承性（继承数据结构和操作）特点，提高软件的可用性</li>
+</ol>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326093439339.png" alt="image-20220326093439339"></p>
+<h2 id="5-数据模型"><a href="#5-数据模型" class="headerlink" title="5.数据模型"></a>5.数据模型</h2><p>模型：对现实世界中某一事物特征的<strong>模拟和抽象</strong></p>
+<h4 id="数据模型的分类"><a href="#数据模型的分类" class="headerlink" title="数据模型的分类"></a>数据模型的分类</h4><ol>
+<li><strong>概念模型</strong>：也称信息模型，它是按用户的观点来对数据和信息建模，用于数据库设计</li>
+<li><strong>逻辑模型</strong>：按计算机系统的观点对数据建模，描述数据的整体逻辑结构，主要用于DBMS实现，包括关系模型、层次模型、网状模型、面向对象模型等</li>
+<li>物理模型：是对数据最底层的抽象，描述数据在系统内部的表示方式和存取方法，在磁盘或磁带上的存储方式和存取方法</li>
+</ol>
+<h4 id="信息世界中的基本概念"><a href="#信息世界中的基本概念" class="headerlink" title="信息世界中的基本概念"></a>信息世界中的基本概念</h4><ol>
+<li><strong>实体</strong>：实体是现实世界中独立存在的事物，如：人，汽车，动物…</li>
+<li><strong>属性</strong>：实体所具有的某一特征，如：学号，姓名，性别…</li>
+<li><strong>域</strong>：属性的取值范围，如：年龄的域是整数，生日的域是日期</li>
+<li><strong>联系</strong>：实体间的相互关系，按照实体参与联系可分为三类：一对一，一对多，多对多</li>
+</ol>
+<p><strong>E-R图</strong></p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326094435155.png" alt="image-20220326094435155"></p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326094446373-16482590872601-16482590884222.png" alt="image-20220326094446373"></p>
+<h2 id="6-数据库的模式结构"><a href="#6-数据库的模式结构" class="headerlink" title="6.数据库的模式结构"></a>6.数据库的模式结构</h2><h3 id="三级模式结构"><a href="#三级模式结构" class="headerlink" title="三级模式结构"></a>三级模式结构</h3><p>三级模式：模式，内模式，外模式</p>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326101119851.png" alt="image-20220326101119851"></p>
+<p><strong>内模式：一个</strong></p>
+<blockquote>
+<p>也称存储模式或物理模式</p>
+<ul>
+<li>数据物理结构和存储方式的描述</li>
+<li>数据在数据内部的表示方式</li>
+</ul>
+</blockquote>
+<p><strong>模式：一个</strong></p>
+<blockquote>
+<p>模式地位：数据库系统模式的中间层</p>
+<ul>
+<li>与数据库的物理存储细节和硬件无关</li>
+<li>与具体的应用程序、开发工具等无关</li>
+</ul>
+</blockquote>
+<p><strong>外模式：多个</strong></p>
+<blockquote>
+<p>也称子模式或用户模式</p>
+<p>一个数据库可以有多个外模式，反映了不同的用户需求，看待数据的方式，对数据保密的要求</p>
+<p><strong>一个应用程序只能拥有一个外模式</strong></p>
+</blockquote>
+<p><img src="D:/Typora%E5%9B%BE%E7%89%87/image-20220326101137515.png" alt="image-20220326101137515"></p>
+<h3 id="二级映像"><a href="#二级映像" class="headerlink" title="二级映像"></a>二级映像</h3><p><strong>外模式/模式映像保证了数据的逻辑独立性</strong></p>
+<ul>
+<li>当模式改变时，数据库管理员修改有关的外模式／模式映象，使外模式保持不变</li>
+<li>应用程序是依据数据的外模式编写的，从而应用程序不必修改，保证了数据与程序的逻辑独立性，简称数据的<strong>逻辑独立性</strong></li>
+</ul>
+<p><strong>模式／内模式映象保证了数据的物理独立性</strong></p>
+<ul>
+<li>数据库中的模式/内模式映像是唯一的</li>
+<li>当数据库的存储结构发生改变时，只需要修改模式映像即可</li>
+</ul>
+<h1 id="第二章-关系数据库基础"><a href="#第二章-关系数据库基础" class="headerlink" title="第二章    关系数据库基础"></a>第二章    关系数据库基础</h1>
                 
             </div>
             <hr/>
@@ -711,7 +764,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://xiayibei.top/posts/010709/">http://xiayibei.top/posts/010709/</a>
+                    <a href="http://xiayibei.top/posts/36360/">http://xiayibei.top/posts/36360/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -749,8 +802,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%95%E5%B1%82/">
-                                    <span class="chip bg-color">计算机底层</span>
+                                <a href="/tags/SqlServer/">
+                                    <span class="chip bg-color">SqlServer</span>
                                 </a>
                             
                         </div>
@@ -920,9 +973,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/posts/36360/">
                     <div class="card-image">
@@ -939,9 +993,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -954,6 +1008,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -972,18 +1027,18 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/010708/">
+                <a href="/posts/010709/">
                     <div class="card-image">
                         
-                        <img src="/images/1.jpg" class="responsive-img" alt="JavaScript学习笔记">
+                        <img src="/images/2.jpg" class="responsive-img" alt="计算机基础学习学习笔记">
                         
-                        <span class="card-title">JavaScript学习笔记</span>
+                        <span class="card-title">计算机基础学习学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript学习笔记
+                            计算机基础学习笔记
                         
                     </div>
                     <div class="publish-info">
@@ -994,8 +1049,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%95%E5%B1%82/" class="post-category">
+                                    计算机底层
                                 </a>
                             
                             
@@ -1005,8 +1060,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%95%E5%B1%82/">
+                        <span class="chip bg-color">计算机底层</span>
                     </a>
                     
                 </div>
