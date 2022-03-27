@@ -477,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    4.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    16 分
                 </div>
                 
 
@@ -693,7 +693,7 @@
 <h4 id="数据模型的分类"><a href="#数据模型的分类" class="headerlink" title="数据模型的分类"></a>数据模型的分类</h4><ol>
 <li><strong>概念模型</strong>：也称信息模型，它是按用户的观点来对数据和信息建模，用于数据库设计</li>
 <li><strong>逻辑模型</strong>：按计算机系统的观点对数据建模，描述数据的整体逻辑结构，主要用于DBMS实现，包括关系模型、层次模型、网状模型、面向对象模型等</li>
-<li>物理模型：是对数据最底层的抽象，描述数据在系统内部的表示方式和存取方法，在磁盘或磁带上的存储方式和存取方法</li>
+<li><strong>物理模型</strong>：是对数据最底层的抽象，描述数据在系统内部的表示方式和存取方法，在磁盘或磁带上的存储方式和存取方法</li>
 </ol>
 <h4 id="信息世界中的基本概念"><a href="#信息世界中的基本概念" class="headerlink" title="信息世界中的基本概念"></a>信息世界中的基本概念</h4><ol>
 <li><strong>实体</strong>：实体是现实世界中独立存在的事物，如：人，汽车，动物…</li>
@@ -739,7 +739,261 @@
 <li>数据库中的模式/内模式映像是唯一的</li>
 <li>当数据库的存储结构发生改变时，只需要修改模式映像即可</li>
 </ul>
-<h1 id="第二章-关系数据库基础"><a href="#第二章-关系数据库基础" class="headerlink" title="第二章    关系数据库基础"></a>第二章    关系数据库基础</h1>
+<h1 id="第二章-关系数据库基础"><a href="#第二章-关系数据库基础" class="headerlink" title="第二章    关系数据库基础"></a>第二章    关系数据库基础</h1><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h2><p><strong>域：</strong>一组具有相同数据类型的值的集合，域决定了属性的取值范围</p>
+<p><strong>笛卡尔积：</strong>是域上的集合运算</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271022125.png"></p>
+<p><code>笛卡尔积的基数为 2×2×3=12</code></p>
+<p><strong>关系：</strong>D1×D2×…×Dn的子集叫作在域D1，D2，…，Dn上的关系，表示为 R（D1，D2，…，Dn）</p>
+<blockquote>
+<p>关系，属性，元组</p>
+<ol>
+<li>关系是笛卡尔积的一个有意义的自己</li>
+<li>每一列称为属性，对应一个域，并起一个名称</li>
+<li>每一行为一个元组</li>
+<li>关系是元组的集合</li>
+</ol>
+</blockquote>
+<h2 id="2-关于码的几个术语"><a href="#2-关于码的几个术语" class="headerlink" title="2.关于码的几个术语"></a>2.关于码的几个术语</h2><p>码：码是我们一个足够能区分关系元组的==属性==集合</p>
+<p>超码：若关系中的某一属性组的值能<strong>唯一地标识一个元组</strong>，则称该属性组为超码，<strong>超码中可能包含一些无关紧要的属性</strong></p>
+<p><strong>候选码</strong>：==候选码是最小超码==，其任意真子集都不能为超码</p>
+<p><strong>主码</strong>：从候选码选定一个用于标识的==元组==，称为主码</p>
+<p>主属性：候选码中各属性称为主属性</p>
+<p>非主属性：不包含在任何候选码中的属性</p>
+<p>全码：若关系模式中的所有属性都是这个关系模式的候选码，则称为全码，<code>所有属性共同确定唯一一个元组</code></p>
+<h2 id="3-关系模型的完整性"><a href="#3-关系模型的完整性" class="headerlink" title="3.关系模型的完整性"></a>3.关系模型的完整性</h2><h3 id="关系的三类完整性约束"><a href="#关系的三类完整性约束" class="headerlink" title="关系的三类完整性约束"></a>关系的三类完整性约束</h3><p>关系模型的完整性规则是对关系的某种约束条件</p>
+<p><strong>三类完整性约束</strong>：</p>
+<ol>
+<li>实体完整性</li>
+<li>参照完整性</li>
+<li>用户定义完整性</li>
+</ol>
+<blockquote>
+<p>实体完整性和参照完整性是用户必须满足的约束条件，成为两个关系的不变性，由DBMS自动支持</p>
+</blockquote>
+<blockquote>
+<p>用户定义完整性是应用领域需要遵守的约束条件</p>
+</blockquote>
+<h3 id="实体完整性"><a href="#实体完整性" class="headerlink" title="实体完整性"></a>实体完整性</h3><p>若属性A是基本关系的主属性，则属性A不能为空值(NULL)</p>
+<p>关系模型中以主码作为唯一标识，==主码既不能为空，也不能重复==</p>
+<h3 id="参照完整性"><a href="#参照完整性" class="headerlink" title="参照完整性"></a>参照完整性</h3><p>它表示的是两个关系之间的联系，是表与表之间的引用。对应的就是外键，外键约束实现参照完整性</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271100396.png"></p>
+<h3 id="用户定义的完整性"><a href="#用户定义的完整性" class="headerlink" title="用户定义的完整性"></a>用户定义的完整性</h3><p>即规定属性的取值范围</p>
+<p><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271103904.png"></p>
+<h2 id="4-关系型数据库语言分类"><a href="#4-关系型数据库语言分类" class="headerlink" title="4.关系型数据库语言分类"></a>4.关系型数据库语言分类</h2><h3 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h3><p>传统的集合关系运算：并交差补</p>
+<p>专门的关系运算：选择，投影，连接，除</p>
+<h3 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h3><p><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271135024.png"></p>
+<h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><p>下一章节介绍</p>
+<h1 id="第四章-数据库、表和数据操作"><a href="#第四章-数据库、表和数据操作" class="headerlink" title="第四章 数据库、表和数据操作"></a>第四章 数据库、表和数据操作</h1><h2 id="1-结构化查询语句分类"><a href="#1-结构化查询语句分类" class="headerlink" title="1.结构化查询语句分类"></a>1.结构化查询语句分类</h2><table>
+<thead>
+<tr>
+<th><strong>名称</strong></th>
+<th><strong>解释</strong></th>
+<th><strong>命令</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DDL（数据定义语言）</td>
+<td>定义和管理数据对象，如数据库，数据表等。</td>
+<td>CREAT,DROP,ALTER</td>
+</tr>
+<tr>
+<td>DML（数据操作语言）</td>
+<td>用于操作数据库对象中所包含的数据</td>
+<td>INSERT,DELETE,UPDATE</td>
+</tr>
+<tr>
+<td>DQL（数据查询语言）</td>
+<td>查询数据库数据</td>
+<td>SELECT</td>
+</tr>
+<tr>
+<td>DCL（数据控制语言）</td>
+<td>用于管理数据库的语言，包括管理权相及数据更改</td>
+<td>GRANT,RECOKE,DENY</td>
+</tr>
+</tbody></table>
+<h2 id="2-数据库操作"><a href="#2-数据库操作" class="headerlink" title="2.数据库操作"></a>2.数据库操作</h2><blockquote>
+<p>命令行操作数据库</p>
+</blockquote>
+<p>创建数据库：<code>create database [if not exists] 数据库名</code></p>
+<p>删除数据库：<code>drop database [if exists] 数据库名</code></p>
+<p>查看数据库：<code>show databases</code></p>
+<p>使用数据库：<code>use 数据库名</code></p>
+<blockquote>
+<p>创建数据表</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> <span class="token punctuation">[</span><span class="token keyword">if</span> <span class="token operator">not</span> <span class="token keyword">exists</span><span class="token punctuation">]</span> <span class="token identifier"><span class="token punctuation">`</span>表名<span class="token punctuation">`</span></span><span class="token punctuation">(</span>
+	<span class="token identifier"><span class="token punctuation">`</span>字段名1<span class="token punctuation">`</span></span> 列类型 <span class="token punctuation">[</span>属性<span class="token punctuation">]</span> <span class="token punctuation">[</span>索引<span class="token punctuation">]</span> <span class="token punctuation">[</span>注释<span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token comment"># ...</span>
+<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 学生(
+	学号 char(10) primary key,
+	姓名 char(5) not null,
+    # ...
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>删除数据</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">delete from `表名` 
+where &lt;条件表达式&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>修改数据</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">update `表名` set `列名`=`修改后的值`
+where &lt;条件表达式&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>增加数据</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql"># 字段名可以部分省略，但添加的值必须与字段名对应，且数量一致
+insert into `表名`(字段1，字段2，...，字段n)
+values (值1，值2，...，值n)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>查询数据</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token punctuation">[</span><span class="token keyword">all</span> <span class="token operator">|</span> <span class="token keyword">distinct</span><span class="token punctuation">]</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> <span class="token identifier"><span class="token punctuation">`</span>表名<span class="token punctuation">`</span></span>
+<span class="token keyword">where</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token comment">------ 指定结果满足满足的条件</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  <span class="token comment">------ 指定结果按照哪几个字段来分组</span>
+<span class="token keyword">having</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token comment">------ 过滤分组要满足的次要条件</span>
+<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  <span class="token comment">------ 指定结果按一定的方式排序，默认升序，desc：降序，缺省值为降序</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271529605.png"></p>
+<blockquote>
+<p>模糊查询</p>
+</blockquote>
+<p>like 运算符用于字符串匹配</p>
+<p>通配符</p>
+<ul>
+<li>%（百分号）：代表任意个任意字符，例如a%b</li>
+<li>__（下划线）：代表一个任意字符，例如a_b</li>
+<li>[]（方括号)：指定范围中的单个字符</li>
+</ul>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 查询所有书名以“数据库”开头的图书</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 图书
+<span class="token keyword">where</span> 书名 <span class="token operator">like</span> <span class="token string">'数据库%'</span>
+
+<span class="token comment"># 查询所有书名含有“计算机”的图书信息</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 图书
+<span class="token keyword">where</span> 书名 <span class="token operator">like</span> <span class="token string">'%计算机%'</span>
+
+<span class="token comment"># 查询以"DB_"开头，且倒数第3个字符为 i的图书信息</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 图书
+<span class="token keyword">where</span> 书名 <span class="token operator">like</span> <span class="token string">'DB/_%i__'</span><span class="token keyword">escape</span>'\'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>集合查询</p>
+</blockquote>
+<p>并：UNION</p>
+<p>交：INTERSECT</p>
+<p>差：EXCEPT</p>
+<p><strong>参加集合操作的各查询结果的列数必须相同；对应项的数据类型也必须相同</strong></p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql"># 查询曾经销售过编号为T001或T002图书的售书网站的编号
+select 售书网站编号 from 售书 where 编号='T001'
+UNINO
+select 售书网站编号 from 售书 where 编号='T002'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="第五章-索引与视图"><a href="#第五章-索引与视图" class="headerlink" title="第五章 索引与视图"></a>第五章 索引与视图</h1><h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><h3 id="1-概念"><a href="#1-概念" class="headerlink" title="1.概念"></a>1.概念</h3><p>==索引==是关系中一列/几列值及相应的指向关系中标识，这些值的数据页的逻辑指针（地址）的==列表==</p>
+<ul>
+<li>索引是键值（关键字）与其数据行地址的对应表</li>
+<li>索引是有序的</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271556873.png"></p>
+<h3 id="2-特点"><a href="#2-特点" class="headerlink" title="2.特点"></a>2.特点</h3><ol>
+<li>极大地提高数据查询速度</li>
+<li>通过创建唯一索引，可以==保证数据库中各行数据的唯一性==</li>
+<li>建在外键的索引可以==加速==多表之间的连接，有益实现数据的参照完整性</li>
+<li>查询涉及到分组和排序时，也可==显著减少分组和排序时间==</li>
+<li>通过使用索引可以在查询过程中使用优化隐藏器，==提高系统性能==。<strong>索引提高检索性能具有一定代价</strong><ul>
+<li>存储空间中除了存放数据表，还需要存放索引的空间</li>
+<li>对数据表插入、修改和删除操作时，相应的索引也需要动态维护更新，消耗系统资源</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-类型"><a href="#3-类型" class="headerlink" title="3.类型"></a>3.类型</h3><ul>
+<li><p>聚簇索引   唯一</p>
+<blockquote>
+<p>聚集索引确定表中数据的物理顺序，它要求数据行按键值在表内有序存储，从而使得数据表的物理顺序与索引顺序一致</p>
+</blockquote>
+<ul>
+<li>提供高度唯一性</li>
+<li>可用于经常使用的查询 </li>
+<li>可用于范围查询</li>
+</ul>
+</li>
+<li><p>非聚簇索引   多个</p>
+</li>
+<li><p>唯一索引</p>
+</li>
+<li><p>复合索引</p>
+<ul>
+<li>建立在多个列上的索引称为复合索引</li>
+<li>复合索引中，系统==按照索引列出现的先后顺序==对索引项排序</li>
+</ul>
+</li>
+<li><p>其他索引</p>
+</li>
+</ul>
+<h3 id="4-索引操作"><a href="#4-索引操作" class="headerlink" title="4.索引操作"></a>4.索引操作</h3><blockquote>
+<p>索引的创建</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token punctuation">[</span><span class="token keyword">unique</span><span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">clustered</span><span class="token punctuation">]</span>
+<span class="token keyword">index</span> <span class="token operator">&lt;</span>索引名<span class="token operator">&gt;</span> <span class="token keyword">on</span> <span class="token identifier"><span class="token punctuation">`</span>表名<span class="token punctuation">`</span></span><span class="token punctuation">(</span>列名<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>索引的查看</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">exec</span> sp_helpindex <span class="token operator">&lt;</span>表名<span class="token operator">&gt;</span>
+<span class="token keyword">dbcc</span> show_statistiics<span class="token punctuation">(</span>表名，索引名<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>索引的删除</p>
+</blockquote>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">index</span> <span class="token operator">&lt;</span>索引名<span class="token operator">&gt;</span> <span class="token keyword">on</span> <span class="token operator">&lt;</span>表名或视图名<span class="token operator">&gt;</span>
+<span class="token keyword">drop</span> <span class="token keyword">index</span> <span class="token operator">&lt;</span>表名或视图名<span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token operator">&lt;</span>索引名<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><h3 id="1-概念-1"><a href="#1-概念-1" class="headerlink" title="1. 概念"></a>1. 概念</h3><h3 id="2-视图的基本操作"><a href="#2-视图的基本操作" class="headerlink" title="2.视图的基本操作"></a><img src="https://cdn.jsdelivr.net/gh/nortise/myblog/img/202203271616773.png">2.视图的基本操作</h3><blockquote>
+<p>视图的创建</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql"># 格式
+create view &lt;视图名&gt; 
+as
+	子查询
+	with check option
+
+# 示例
+create view professor
+as
+	select 工号,系部编号, 教师姓名,性别,年龄, 职称
+	from 教师
+	where 职称='教授'
+	with check option<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>with check option 作用</p>
+<ol>
+<li>对于update,有with check option，要保证update后，数据要被视图查询出来</li>
+<li>对于delete,有无with check option都一样</li>
+<li>对于insert,有with check option，要保证insert后，数据要被视图查询出来</li>
+<li>对于没有where 子句的视图，使用with check option是多余的</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>视图的修改</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter view &lt;视图名&gt;
+as &lt;子查询&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>视图的删除</p>
+</blockquote>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">drop view &lt;视图名&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -1304,7 +1558,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.8k</span>&nbsp;字
+                class="white-color">8.7k</span>&nbsp;字
             
             
             
@@ -1621,6 +1875,6 @@ $(function () {
         }
         </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":420},"mobile":{"show":true}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":420},"mobile":{"show":false}});</script></body>
 
 </html>
